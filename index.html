@@ -49,7 +49,7 @@ header.scrolled{background:rgba(10,10,10,.82);backdrop-filter:blur(12px);border-
 .hero::before{content:"";position:absolute;width:900px;height:900px;right:-300px;top:-200px;background:radial-gradient(circle,rgba(242,84,91,.18),transparent 60%);pointer-events:none}
 .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;opacity:.25;mask-image:radial-gradient(ellipse at center,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at center,#000 20%,transparent 70%);pointer-events:none}
 .hero-inner{position:relative;z-index:1}
-.monogram{width:116px;height:116px;border-radius:50%;margin:0 auto 28px;display:grid;place-items:center;font-size:2.4rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 0 8px rgba(242,84,91,.1),0 20px 60px rgba(242,84,91,.3)}
+.avatar{display:block;width:150px;height:150px;border-radius:50%;margin:0 auto 28px;object-fit:cover;object-position:center 20%;border:3px solid var(--accent);box-shadow:0 0 0 8px rgba(242,84,91,.1),0 20px 60px rgba(242,84,91,.3)}
 .hero h1{font-size:clamp(2.2rem,6vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-.5px}
 .typed-line{font-size:clamp(1.15rem,2.6vw,1.6rem);color:var(--muted);margin-top:14px;min-height:2.2em}
 .typed{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:2px}
@@ -183,7 +183,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="wrap hero-inner">
-    <div class="monogram">VS</div>
+    <img class="avatar" src="Profile.jpg" alt="Vinod Siram">
     <h1>Hi, I'm Vinod Siram</h1>
     <div class="typed-line">I'm a <span class="typed" id="typed"></span><span class="caret"></span></div>
     <div class="socials">
