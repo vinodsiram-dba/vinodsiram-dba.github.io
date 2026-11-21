@@ -59,7 +59,11 @@ header.scrolled{background:rgba(10,10,10,.82);backdrop-filter:blur(12px);border-
 .socials a{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--card2);border:1px solid var(--line);transition:.2s}
 .socials a:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-3px)}
 .hero-cta{display:flex;gap:12px;justify-content:center;margin-top:30px;flex-wrap:wrap}
-.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--dim);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;z-index:1}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--dim);z-index:1;animation:bob 2s ease-in-out infinite;transition:color .2s}
+.scroll-hint:hover{color:var(--accent)}
+.scroll-hint svg{display:block;width:32px;height:32px}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,6px)}}
+@media (prefers-reduced-motion:reduce){.scroll-hint{animation:none}}
 
 /* sections */
 section{padding:100px 0}
@@ -197,7 +201,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
       <a href="#contact" class="btn btn-ghost">Contact</a>
     </div>
   </div>
-  <div class="scroll-hint">Scroll</div>
+  <a href="#about" class="scroll-hint" aria-label="Scroll down"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
 </section>
 
 <!-- ABOUT -->
